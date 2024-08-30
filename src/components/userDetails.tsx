@@ -4,7 +4,7 @@ import { getUserById } from "@/services/api";
 import { Flex, Spinner } from "@chakra-ui/react";
 import { useEffect, useState, useCallback } from "react";
 import { Link, useParams } from "react-router-dom";
-import "@/App.css"
+import "@/App.css";
 
 const UserDetail = () => {
   // Retrieve the user ID from the URL parameters
@@ -69,24 +69,24 @@ const UserDetail = () => {
         </div>
       </Link>
       {/* User detail card */}
-      <div className="bg-white p-8 rounded-lg shadow-sm animate-fadeDown">
-        <h1 className="text-4xl font-bold text-blue-600 mb-8 font-Poppins">
+      <div className="bg-white p-6 sm:p-8 md:p-10 rounded-lg shadow-sm animate-fadeDown w-full max-w-lg mx-4">
+        <h1 className="text-3xl sm:text-4xl font-bold text-blue-600 mb-6 sm:mb-8 font-Poppins">
           {user.name} {/* Display the user's name */}
         </h1>
-        <div className="text-lg text-gray-600 mb-6">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-3">
+        <div className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
+          <h2 className="text-xl sm:text-2xl font-semibold text-gray-700 mb-2 sm:mb-3">
             Personal Info
           </h2>
           {/* Display user personal information */}
-          <p className="mb-2">
+          <p className="mb-1 sm:mb-2">
             <span className="font-medium">Email:</span> {user.email}
           </p>
-          <p className="mb-2">
+          <p className="mb-1 sm:mb-2">
             <span className="font-medium">Phone:</span> {user.phone}
           </p>
         </div>
         <div className="border-t pt-4 mt-4">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-3">Address</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold text-gray-700 mb-2 sm:mb-3">Address</h2>
           {/* Display user address information */}
           <p className="text-gray-600">
             {user.address?.street}, {user.address?.suite}
@@ -96,7 +96,7 @@ const UserDetail = () => {
           </p>
         </div>
         <div className="border-t pt-4 mt-4">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-3">Company</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold text-gray-700 mb-2 sm:mb-3">Company</h2>
           {/* Display user company information */}
           <p className="text-gray-600">{user.company?.name}</p>
           <p className="text-gray-600">{user.company?.catchPhrase}</p>

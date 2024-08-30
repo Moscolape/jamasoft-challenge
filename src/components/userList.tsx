@@ -57,7 +57,7 @@ const UserList: React.FC = React.memo(() => {
     <div className="flex flex-col py-5 bg-gray-100 min-h-screen">
       {/* Header section with a title and button to add a new user */}
       <div className="w-full flex justify-between items-center p-5 mb-5 fixed top-0 bg-gray-100 z-30 h-[10vh]">
-        <h1 className="text-4xl font-bold text-blue-600 font-Poppins animate-bump">
+        <h1 className="text-xl sm:text-4xl font-bold text-blue-600 font-Poppins animate-bump">
           All Users
         </h1>
         <button
@@ -72,15 +72,15 @@ const UserList: React.FC = React.memo(() => {
       {/* Render message if there are no users */}
       {userList.length === 0 ? (
         <Flex height="60vh" alignItems="center" justifyContent="center">
-          <span className="text-red-600 font-semibold">No users!!</span>
+          <span className="text-red-600 font-semibold text-lg">No users!!</span>
         </Flex>
       ) : (
         /* Render a grid of user cards */
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full px-5 font-Inter relative top-[10vh]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full px-4 sm:px-6 lg:px-8 font-Inter relative top-[10vh]">
           {userList.map((user) => (
             <div
               key={user.id}
-              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 animate-fadeUp"
+              className="bg-white rounded-lg shadow-lg p-4 sm:p-6 hover:shadow-xl transition-shadow duration-300 animate-fadeUp"
             >
               {/* Link to user detail page */}
               <Link
@@ -88,16 +88,16 @@ const UserList: React.FC = React.memo(() => {
                 className="block"
                 title="view details"
               >
-                <h3 className="text-2xl font-semibold text-gray-800">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-800">
                   {user.name}
                 </h3>
               </Link>
-              <p className="text-gray-600 mb-4">{user.email}</p>
+              <p className="text-gray-600 text-sm sm:text-base mb-4">{user.email}</p>
               
               {/* Button to delete the user */}
               <button
                 onClick={() => deleteUser(user.id)}
-                className="w-1/3 bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition-colors duration-300 mt-6"
+                className="w-full sm:w-1/3 bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition-colors duration-300 mt-4 sm:mt-6"
                 title="delete"
               >
                 Delete
