@@ -1,0 +1,100 @@
+#root {
+  margin: 0 auto;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+@keyframes fadeDown {
+  0% {
+    transform: translateY(-30%);
+    opacity: 0;
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+}
+
+.animate-fadeDown {
+  animation: fadeDown 0.7s;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(0);
+    animation-timing-function: ease-in-out;
+  }
+  25% {
+    transform: scale(1.2);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+  75% {
+    transform: scale(1.1);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: scale(1);
+    animation-timing-function: ease-in;
+  }
+}
+
+.animate-bump {
+  animation: bump 1.5s linear 1;
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(30%);
+    opacity: 0;
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 0.7s;
+}

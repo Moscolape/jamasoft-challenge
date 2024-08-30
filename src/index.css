@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  transition: 0.2s ease-in-out all;
+}
+
+/* DM Sans */
+.font-DM-Sans {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.font-Hind {
+  font-family: 'Hind', sans-serif;
+}
+
+/* Inter */
+.font-Inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-Montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Poppins */
+.font-Poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  scroll-behavior: smooth;
+}
+
