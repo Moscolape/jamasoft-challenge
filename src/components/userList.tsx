@@ -1,9 +1,10 @@
 import React, { useCallback, useEffect, useState } from "react";
-import useUsers, { User } from "@/hooks/useUsers";
+import useUsers from "@/hooks/useUsers";
 import { Flex, Spinner } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import "@/App.css";
 import AddUserForm from "./userForm";
+import { User } from "@/global.types";
 
 // Define a functional component for listing users
 const UserList: React.FC = React.memo(() => {

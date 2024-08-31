@@ -1,10 +1,10 @@
 import { arrowBack } from "@/constants/assets";
-import { User } from "@/hooks/useUsers";
 import { getUserById } from "@/services/api";
 import { Flex, Spinner } from "@chakra-ui/react";
 import { useEffect, useState, useCallback } from "react";
 import { Link, useParams } from "react-router-dom";
 import "@/App.css";
+import { User } from "@/global.types";
 
 const UserDetail = () => {
   // Retrieve the user ID from the URL parameters

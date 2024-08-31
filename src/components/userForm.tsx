@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
-import { User } from "@/hooks/useUsers";
 import { cancel } from "@/constants/assets";
+import { User } from "@/global.types";
 
 // Interface defining the input fields for the user form
 interface UserFormInput {
